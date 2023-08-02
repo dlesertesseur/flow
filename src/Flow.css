@@ -1,0 +1,20 @@
+.react-flow__node.state {
+    border-radius: 36px;
+    width: 120px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+  }
+
+  .react-flow__node.transition {
+    width: 120px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    color: #fff;
+    background: black;
+  }
