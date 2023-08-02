@@ -2,16 +2,16 @@ import { Group, Button, TextInput, Text, Dialog } from "@mantine/core";
 import { useEffect, useState } from "react";
 
 // eslint-disable-next-line react/prop-types
-const UpdateNodo = ({ node, open, setOpen, updateNodeMetadata }) => {
+const UpdateEdge = ({ edge, open, setOpen, updateEdgeMetadata }) => {
   // eslint-disable-next-line react/prop-types
   const [label, setLabel] = useState(null);
 
   useEffect(( ) => {
-    if(node){
+    if(edge){
       // eslint-disable-next-line react/prop-types
-      setLabel(node.data.label)
+      setLabel(edge.label)
     }
-  }, [node])
+  }, [edge])
 
   return (
     <Dialog opened={open} onClose={() => setOpen(false)} withCloseButton>
@@ -25,7 +25,7 @@ const UpdateNodo = ({ node, open, setOpen, updateNodeMetadata }) => {
           onClick={() => {
             setOpen(false);
             // eslint-disable-next-line react/prop-types
-            updateNodeMetadata(node.id, label);
+            updateEdgeMetadata(edge.id, label);
           }}
         >
           Aceptar
@@ -35,4 +35,4 @@ const UpdateNodo = ({ node, open, setOpen, updateNodeMetadata }) => {
   );
 };
 
-export { UpdateNodo };
+export { UpdateEdge };
