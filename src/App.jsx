@@ -1,8 +1,8 @@
 //import "./App.css";
-import Flow from "./components/flowNet";
+import Nav from "./components/nav/Nav";
 
 function App() {
-  return <Flow />;
+  return <Nav />;
 }
 
 export default App;
