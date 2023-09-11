@@ -1,8 +1,8 @@
 //import "./App.css";
-import Nav from "./components/nav/Nav";
+import DndPanel from "./components/beautifulDnd";
 
 function App() {
-  return <Nav />;
+  return <DndPanel />;
 }
 
 export default App;

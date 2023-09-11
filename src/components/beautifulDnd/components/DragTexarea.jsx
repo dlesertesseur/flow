@@ -1,25 +1,23 @@
-import { Group, Paper, Text } from "@mantine/core";
+import { Paper, Textarea } from "@mantine/core";
 import { Draggable } from "react-beautiful-dnd";
 
 // eslint-disable-next-line react/prop-types
-const DragToolbarComponent = ({ id, index, value, icon }) => {
+const DragTexarea = ({ id, index, value }) => {
   return (
     <Draggable draggableId={id} index={index}>
       {(provided) => (
-        <Paper withBorder
-        p={"xs"}
+        <Paper
+          bg={"gray.2"}
+          p={"xs"}
           ref={provided.innerRef}
           {...provided.draggableProps}
           {...provided.dragHandleProps}
         >
-          <Group position="apart">
-            <Text size={"sm"} weight={600}>{value}</Text>
-            {icon}
-          </Group>
+          <Textarea label={value} placeholder={value}/>
         </Paper>
       )}
     </Draggable>
   );
 };
 
-export default DragToolbarComponent;
+export default DragTexarea;

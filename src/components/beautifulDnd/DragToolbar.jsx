@@ -8,10 +8,17 @@ const DragToolbar = ({ id, data = [] }) => {
   const wsize = useWindowSize();
   return (
     <Droppable droppableId={id}>
-      {(provided,) => (
-        <Stack bg={"orange"} p={"xs"} spacing={"xs"} h={wsize.height-20} {...provided.droppableProps} ref={provided.innerRef}>
+      {(provided) => (
+        <Stack
+          bg={"orange"}
+          p={"xs"}
+          spacing={"xs"}
+          h={wsize.height - 20}
+          {...provided.droppableProps}
+          ref={provided.innerRef}
+        >
           {data.map((item, index) => (
-            <DragToolbarComponent key={item.id} id={item.id} index={index} value={item.value} />
+            <DragToolbarComponent key={item.id} id={item.id} index={index} value={item.value} icon={item.icon} />
           ))}
           {provided.placeholder}
         </Stack>
